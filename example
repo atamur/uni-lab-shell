@@ -1,0 +1,12 @@
+echo "">sorted.txt
+echo LOG:clear sorted.txt
+my_cat sample1.txt|my_grep1 "i miss"| my_wc
+echo LOG:grep and wc finished
+my_tail -3 sample1.txt
+echo LOG: tail finished
+sort < sample1.txt > sorted.txt
+echo LOG: sort finished
+my_cat >> sorted.txt
+echo LOG: cat finished
+my_cat sorted.txt | my_grep1 comfort
+echo LOG: cat and grep finished
